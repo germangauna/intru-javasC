@@ -184,20 +184,189 @@
 
 //Alertyy si queremos borrar, estas seguro que quieras borrar??, y desopues ok.
 
-Swal.fire({
-    title: "Estas seguro?",
-    text: "no podras revertir esto!",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Si, Borrar!"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: "Borrado!",
-        text: "Su archivo ha sido eliminado.",
-        icon: "success"
-      });
+// Swal.fire({
+//     title: "Estas seguro?",
+//     text: "no podras revertir esto!",
+//     icon: "warning",
+//     showCancelButton: true,
+//     confirmButtonColor: "#3085d6",
+//     cancelButtonColor: "#d33",
+//     confirmButtonText: "Si, Borrar!"
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire({
+//         title: "Borrado!",
+//         text: "Su archivo ha sido eliminado.",
+//         icon: "success"
+//       });
+//     }
+//   });
+
+//Modal con una imagen, mensaje y la imagen cambia segun la pagina en la cual le ponmemos, podemos cambiar la pagina.
+
+
+// Swal.fire({
+//     title: "Hasta luego",
+//     text: "modal copm imagen.",
+//     imageUrl: "https://unsplash.it/400/200",
+//     imageWidth: 400,
+//     imageHeight: 200,
+//     imageAlt: "Custom image"
+//   });
+
+// Un mensaje con ancho, relleno, fondo personalizado y Nyan Cat animado
+
+// Swal.fire({
+//     title: "Custom width, padding, color, background.",
+//     width: 600,
+//     padding: "3em",
+//     color: "#716add",
+//     background: "#fff url(/images/trees.png)",
+//     backdrop: `
+//       rgba(0,0,123,0.4)
+//       url("/images/nyan-cat.gif")
+//       left top
+//       no-repeat
+//     `
+//   });
+
+//aleta con ciere automatico con cuanta regresiva, tiene un error en la conmsola.
+
+
+
+
+// let timerInterval;
+// Swal.fire({
+//   title: "Alerta de cierre automatico!",
+//   html: "Se cerrara en los proxs segundos.",
+//   timer: 2000,
+//   timerProgressBar: true,
+//   didOpen: () => {
+//     Swal.showLoading();
+//     const timer = Swal.getPopup().querySelector("b");
+//     timerInterval = setInterval(() => {
+//       timer.textContent = `${Swal.getTimerLeft()}`;
+//     }, 100);
+//   },
+//   willClose: () => {
+//     clearInterval(timerInterval);
+//   }
+// }).then((result) => {
+//   /* Read more about handling dismissals below */
+
+//   if (result.dismiss === Swal.DismissReason.timer) {
+//     console.log("I was closed by the timer");
+//   }
+// });
+
+//enviar el usuario de git hub
+
+// Swal.fire({
+//     title: "Submit your Github username",
+//     input: "text",
+//     inputAttributes: {
+//       autocapitalize: "off"
+//     },
+//     showCancelButton: true,
+//     confirmButtonText: "Look up",
+//     showLoaderOnConfirm: true,
+//     preConfirm: async (login) => {
+//       try {
+//         const githubUrl = `
+//           https://api.github.com/users/${login}
+//         `;
+//         const response = await fetch(githubUrl);
+//         if (!response.ok) {
+//           return Swal.showValidationMessage(`
+//             ${JSON.stringify(await response.json())}
+//           `);
+//         }
+//         return response.json();
+//       } catch (error) {
+//         Swal.showValidationMessage(`
+//           Request failed: ${error}
+//         `);
+//       }
+//     },
+//     allowOutsideClick: () => !Swal.isLoading()
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire({
+//         title: `${result.value.login}'s avatar`,
+//         imageUrl: result.value.avatar_url
+//       });
+//     }
+//   });
+
+//alert de iniciando sesion con temporizador y barra con el tilde de ok-
+
+
+// const Toast = Swal.mixin({
+//     toast: true,
+//     position: "top-center",
+//     showConfirmButton: false,
+//     timer: 3000,
+//     timerProgressBar: true,
+//     didOpen: (toast) => {
+//       toast.onmouseenter = Swal.stopTimer;
+//       toast.onmouseleave = Swal.resumeTimer;
+//     }
+//   });
+//   Toast.fire({
+//     icon: "success",
+//     title: "Iniciando sesion!!"
+//   });
+
+// Ingreso con creador de ip
+
+// const ipAPI = "//api.ipify.org?format=json";
+// const response = await fetch(ipAPI);
+// const data = await response.json();
+// const inputValue = data.ip;
+// const { value: ipAddress } = await Swal.fire({
+//   title: "Enter your IP address",
+//   input: "text",
+//   inputLabel: "Your IP address",
+//   inputValue,
+//   showCancelButton: true,
+//   inputValidator: (value) => {
+//     if (!value) {
+//       return "You need to write something!";
+//     }
+//   }
+// });
+// if (ipAddress) {
+//   Swal.fire(`Your IP address is ${ipAddress}`);
+// }
+
+//ingreso com imal
+
+// const { value: email } = await Swal.fire({
+//     title: "Input email address",
+//     input: "email",
+//     inputLabel: "Your email address",
+//     inputPlaceholder: "Enter your email address"
+//   });
+//   if (email) {
+//     Swal.fire(`Entered email: ${email}`);
+//   }
+
+// Estoy de acuerdo con terminos y condiciones
+
+const { value: accept } = await Swal.fire({
+    title: "Terms and conditions",
+    input: "checkbox",
+    inputValue: 1,
+    inputPlaceholder: `
+      I agree with the terms and conditions
+    `,
+    confirmButtonText: `
+      Continue&nbsp;<i class="fa fa-arrow-right"></i>
+    `,
+    inputValidator: (result) => {
+      return !result && "You need to agree with T&C";
     }
   });
+  if (accept) {
+    Swal.fire("You agreed with T&C :)");
+  }
