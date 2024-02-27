@@ -47,18 +47,42 @@ console.log ("terminamos");
 
  //Tabla para que incremenete
 
- let numero =parseInt(prompt("ingrese un  numero"));
+//  let numero =parseInt(prompt("ingrese un  numero"));
 
- for (let i = 0; i <= 10; i++) {
-      let resultado = numero * i;  
-      let mensaje = ` ${numero} * ${i} = ${resultado} `;
-      alert(mensaje);
+//  for (let i = 0; i <= 10; i++) {
+//       let resultado = numero * i;  
+//       let mensaje = ` ${numero} * ${i} = ${resultado} `;
+//       alert(mensaje);
 
- }
+//  }
 
- alert("termino la tabla");
+//  alert("termino la tabla");
 
  // ingresamos un numero, este numero que ingresemos pasara por el for,
  // donde la la sintaxis del for va a ser, que el numero ingresado se multiplique
  // por 1, 2, 3.... hasta llegar a 10, y en el resultado le mostraremos 
  // el numero x la y que sea igual al rersultado que psuimos arriba-.
+
+//solo mostraremos el resultado, el valor que ingresemos recorrera, se multiplicara y saldra el resultado nada mas.
+
+//  let numero =parseInt(prompt("ingrese un  numero"));
+
+//  for (let i = 0; i <= 10; i++) {
+//       let resultado = numero * i;  
+  
+//       alert(resultado);
+
+//  }
+
+// Vale aclarar que el ciclo sucede y despue stemdremos que poner que queremos mostar, porque si le ponemos en consola let resultado, nos motraria solo los resultados
+
+//supongamos que tenemos que trabnajmos para un medico que solo puede dar 10 turnos.
+
+for (let i = 0; i < 10; i ++) {
+   
+   let nombre = prompt("ingrese su nombre ");
+    let mensaje = `Turno #${i} Nombre : ${nombre}`;
+    alert(mensaje);
+
+    
+}
