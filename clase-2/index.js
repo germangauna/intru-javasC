@@ -230,4 +230,77 @@
 //     console.log("entramos");
 // }
 
-//
+//para ingresar el nombre que sea diferente a nada y a la vez large un menssje por consola.
+
+// let nombre = prompt("ingrese su nombre");
+
+// if (nombre != "") {
+//     let mensaje = `hola ${nombre}`;
+//     console.log(mensaje);
+//    // alert(mensaje);
+// }
+
+
+
+//OPERADORES LOGICOS
+
+// && las dos condicones  tienen que ser verdderas
+
+// || aunque sea una sola de las conmdiciones tiene que ser verdades
+
+
+// &&
+// let respuestaTarea = prompt("terminaste la tarea");
+// let respuestaCasa = prompt("oraganizaste la tarea");
+
+//   if (respuestaTarea.toLowerCase() === "si" && respuestaCasa.toLowerCase() === "si"  ){
+//   	alert("puede salir a jugar");
+
+//   } else {
+//  	alert("no puede salir a jugar");
+// }
+
+// || Y &&, aca hicimos un prompt donde tienes que ingresa el 
+// nombre, y las condiones para las repuestas son; si el nombre
+// es iguaL a endres en minuscula o|| nombrer es igual a andres
+//en mayuscula y&& el nombre tiene que ser distinto a nada. 
+
+// let nombre = prompt("ingrese nombre");
+
+// if ((nombre == "andres" || nombre == "ANDRES") &&(nombre !== ""))  {
+//     alert("hola andres")
+// } else {
+//     alert("no ingresaste los datos correctamente");
+// }
+
+// let numero = parseInt(prompt("diga un numero mayor a mil"));
+
+// if ( numero > 1000 ) {
+// 	alert("ya tiene su numero")
+// }else { 
+// 	alert (" ingrese otro numero")
+// }	
+
+
+// let tarea = prompt("hiciste la tarea?");
+// let casa = prompt("ordenaste la casa");
+
+// if (tarea === "si" || casa === "si") {
+
+//     if (tarea === "si") {
+//         if (casa == "si") {
+//             console.log("puedes salir");
+//         }else {
+//             console.log("organizar la casa");  
+//         }
+//         }else {
+//             console.log("tienes que hacer la tarea"); 
+//         }  
+//     }else {
+//         console.log("no puedes salir tienes que hacer las dos cosas"); 
+
+// }
+
+
+
+
