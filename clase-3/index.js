@@ -350,12 +350,13 @@
 //     console.log(i);
 // }
 
-//continue, 
+//continue, de esta manera veremos solo los numeros impares
+//cuando la i sea un numero par lo saltea
 
 
-for (let i = 0; i <= 10; i++) {
-    if ( i % 2 == 0 ) {
-        continue;
-    };
-    console.log(i);
-}
+// for (let i = 0; i <= 10; i++) {
+//     if ( i % 2 == 0 ) {
+//         continue;
+//     };
+//     console.log(i);
+// }
