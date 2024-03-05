@@ -103,7 +103,7 @@ funcion nombreFuncion ( par1, par2, par3...){
 //     }
 // }
 
-// calculadora(2, 4, "+");
+// calculadora(2, 4, "+"); ponemmos entre comillas xq sino no funciona al
 
 // RETURN
 
@@ -126,9 +126,16 @@ funcion nombreFuncion ( par1, par2, par3...){
 //  funcion le pongo valores en este caso a x , y, y luego un console.log
 //   de esa variable, me va a dar el resultado de de la funcion que esta guardada.
 
-function suma(x, y) {
-    return x + y;
-}
+// function suma(x, y) {
+//     return x + y;
+// }
 
-let resultado = suma(3, 5);
-console.log(resultado);
+// let resultado = suma(3, 5);
+// console.log(resultado);
+
+function carrito(nombre) {
+    return `en 5 min su hijo ${nombre} va a estar en la escuela`;
+
+}
+    let mensaje = carrito ("carlitos");
+    alert(mensaje);
