@@ -345,5 +345,25 @@ funcion nombreFuncion ( par1, par2, par3...){
 
 // arrown function, me va a decir que no puedo declararla y despues llamarla.
 
-saludo()
-const  saludo = () => "hola";
+// saludo()
+// const  saludo = () => "hola";
+
+//funcion para sacar el iva
+
+let suma = (a, b) => a + b;
+let resta = (a, b) => a - b;
+const iva = x => x * 0.21;
+
+let precio = 1000;
+let descuento = 100;
+
+let nuevoPrecio = resta(suma(precio, iva(precio)), descuento);
+console.log(nuevoPrecio);
+
+// el calculo desmembrado
+
+// let nuevoPrecio = resta(suma(precio, iva(precio)), descuento);
+//                 = resta(suma(1000, iva(1000)), 100);
+//                 = resta(1000 + 1000 * 0.21, 100);
+//                 =( 1000 + ( 1000 * 0.21 )) - 100
+//                 = 1110
