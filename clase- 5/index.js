@@ -76,16 +76,99 @@
 //y de esta manera hicimos una de las cards que puede llegar a tener un ecommerce.
 
 
-function Producto(tabla){
-	this.img=tabla.img;
-	this.precio= tabla.precio;
-	this.nombre= tabla.nombre;
+// function Producto(tabla){
+// 	this.img=tabla.img;
+// 	this.precio= tabla.precio;
+// 	this.nombre= tabla.nombre;
+// }
+
+// let producto1 = new Producto ({
+//     img: "http/..",
+//     precio:40000,
+//     nombre: "monitor samgsun"
+// })
+
+// console.log(producto1);
+
+// metodo
+
+//console.log("lina".toUpperCase());//LO CONVIERTE EN MAYUSCULA
+
+//console.log("lina".length);//TE DICE LA LONGITUD DEL STRIG, en este caso 4
+
+// function Persona(nombre, edad, direccion){
+// 	this.nombre=nombre;
+// 	this.edad= edad;
+// 	this.direccion= direccion;
+//     this.hablar= function () { console.log("hola soy " + this.nombre);
+        
+//     }
+// }
+
+// let persona1 = new Persona("maria", 45, "av");
+// persona1.hablar();
+
+//llamo a la persona con el this hablar.
+
+// let persona = { 
+// 	nombre: "pepito",  
+// 	edad: 23,
+// 	direccion: "av"	
+// };
+
+// for (const propiedad in persona) {
+// 	console.log(persona[propiedad]);
+// }
+
+
+// construictora:
+
+// class Persona {
+//     constructor (nombre, edad, direccion){
+//         this.nombre= nombre;
+//         this.edad= edad;
+//         this.direccion= direccion;
+//     }
+
+
+//     hablar(){
+//         console.log("Hola hija" + this.nombre);
+//         }
+
+// }
+
+// let persona1 = new Persona("maria", 34, "av");
+// console.log(persona1.edad);
+
+// Creando un objeto constructor con un booleano en el this. vendido
+
+
+
+
+
+//ejemplo con cantidad
+
+class Producto{
+    constructor (nombre, precio, cantidad){
+        this.nombre= nombre;
+        this.precio= precio;
+        this.cantidad= cantidad;
+    }
+    vender(){
+
+        this.cantidad = this.cantidad -1;
+    }
+    
+
 }
 
-let producto1 = new Producto ({
-    img: "http/..",
-    precio:40000,
-    nombre: "monitor samgsun"
-})
-
-console.log(producto1);
+    let producto1 = new Producto("televisor", 340000, 5);
+    let producto2 = new Producto("camara", 40000, 4);
+        console.log(producto1);
+        producto1.vender();
+		console.log(producto1);
+        console.log(producto2);
+        producto1.vender();
+        console.log(producto1);
+        console.log(producto2);
+        producto1.vender();
