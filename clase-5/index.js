@@ -148,27 +148,54 @@
 
 //ejemplo con cantidad
 
-class Producto{
-    constructor (nombre, precio, cantidad){
-        this.nombre= nombre;
-        this.precio= precio;
-        this.cantidad= cantidad;
-    }
-    vender(){
+// class Producto{
+//     constructor (nombre, precio, cantidad){
+//         this.nombre= nombre;
+//         this.precio= precio;
+//         this.cantidad= cantidad;
+//     }
+//     vender(){
 
-        this.cantidad = this.cantidad -1;
-    }
+//         this.cantidad = this.cantidad -1;
+//     }
     
 
+// }
+
+//     let producto1 = new Producto("televisor", 340000, 5);
+//     let producto2 = new Producto("camara", 40000, 4);
+//         console.log(producto1);
+//         producto1.vender();
+// 		console.log(producto1);
+//         console.log(producto2);
+//         producto1.vender();
+//         console.log(producto1);
+//         console.log(producto2);
+//         producto1.vender();
+
+
+const german = {
+	nombre: "german",
+	apellido: "gauna",
+	edad: 38,
+	pasatiempo: [ "correr", "hacer ejercicio", "dar clases"],
+	soltero: false,
+	contacto: { 
+		email:"germangauna88Qgamil.com.ar",
+		twitter:"gaunager",
+		movil: "011272537",
+		},
+	saludar: function(){
+		console.log(`hola`);
+		}
 }
 
-    let producto1 = new Producto("televisor", 340000, 5);
-    let producto2 = new Producto("camara", 40000, 4);
-        console.log(producto1);
-        producto1.vender();
-		console.log(producto1);
-        console.log(producto2);
-        producto1.vender();
-        console.log(producto1);
-        console.log(producto2);
-        producto1.vender();
+console.log(german);
+console.log(german["nombre"]);
+console.log(german["apellido"]);
+console.log(german.edad);
+console.log(german.soltero);
+console.log(german.pasatiempo);
+console.log(german.pasatiempo);
+console.log(german.contacto.twitter);
+german.saludar();
